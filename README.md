@@ -112,8 +112,10 @@ curl -X DELETE http://localhost:3000/api/notes/1
   Muuta porttikartoitusta `docker-compose.yml`:
 
   ```yaml
+
   ports:
     - "3001:3000"
+    
   ```
 
   Tällöin avaa: `http://localhost:3000`.
@@ -123,17 +125,21 @@ curl -X DELETE http://localhost:3000/api/notes/1
   Windowsissa auttaa joskus:
 
   ```bash
+
   docker compose down
   docker compose up --build
+
   ```
 
 * **“nodemon not found”**
   Tee rebuild (riippuvuudet asennetaan buildissä):
 
   ```bash
+
   docker compose down
   docker compose build
   docker compose up
+
   ```
 
 ---
@@ -162,10 +168,10 @@ Laajennukset (myöhemmin):
 
 Voit lisätä README\:hen esim.:
 
-```
+
 ![Etusivu](screenshotdo.png)
 
-```
+
 
 Onnea matkaan! 💪
 
