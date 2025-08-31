@@ -116,7 +116,7 @@ curl -X DELETE http://localhost:3000/api/notes/1
     - "3001:3000"
   ```
 
-  Tällöin avaa: `http://localhost:3001`.
+  Tällöin avaa: `http://localhost:3000`.
 
 * **Koodi ei päivity**
   `nodemon` käynnistää automaattisesti. Jos ei, pysäytä ja aja `docker compose up` uudelleen.
@@ -163,8 +163,8 @@ Laajennukset (myöhemmin):
 Voit lisätä README\:hen esim.:
 
 ```
-![Etusivu](docs/screenshot-home.png)
-![Lisäys](docs/screenshot-create.png)
+![Etusivu](screenshotdo.png)
+
 ```
 
 Onnea matkaan! 💪
