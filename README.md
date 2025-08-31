@@ -115,7 +115,7 @@ curl -X DELETE http://localhost:3000/api/notes/1
 
   ports:
     - "3001:3000"
-    
+
   ```
 
   Tällöin avaa: `http://localhost:3000`.
@@ -169,7 +169,7 @@ Laajennukset (myöhemmin):
 Voit lisätä README\:hen esim.:
 
 
-![Etusivu](screenshotdo.png)
+![Etusivu](Screenshotdo.png)
 
 
 
