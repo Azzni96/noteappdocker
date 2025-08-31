@@ -9,8 +9,8 @@ Data säilyy **vain muistissa** (ei tietokantaa / ei tiedostotallennusta). Mukan
 ---
 
 ```
-```
 ## 📁 Projektirakenne
+```
 
 my-notes-app/
 ├─ package.json
