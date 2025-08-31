@@ -9,7 +9,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     healthcheck:
-      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD || exit 1"]
+      test: ["CMD-SHELL", "mariadb -h localhost -u root -p$$MYSQL_ROOT_PASSWORD -e 'SELECT 1' || exit 1"]
       interval: 5s
       timeout: 3s
       retries: 20
