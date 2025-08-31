@@ -1,9 +1,46 @@
 services:
+  db:
+    image: mariadb:11
+    environment:
+      - MYSQL_DATABASE=notesdb
+      - MYSQL_USER=appuser
+      - MYSQL_PASSWORD=apppass
+      - MYSQL_ROOT_PASSWORD=rootpass
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
   web:
     build: .
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
-      - /app/node_modules
-    command: npm run dev
+    environment:
+      - PORT=3000
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=notesdb
+      - DB_USER=appuser
+      - DB_PASS=apppass
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    develop:
+      watch:
+        - path: .
+          target: /app
+          action: sync+restart
+          ignore:
+            - node_modules/
+            - .git/
+        - path: package.json
+          action: rebuild
+        - path: Dockerfile
+          action: rebuild
+
+volumes:
+  db_data:
