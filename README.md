@@ -160,13 +160,9 @@ npm run dev
 
 ---
 
-## 📌 Huomio datasta
+## 📌 MariaDB käyttö 
 
-Tämä versio **ei tallenna pysyvästi** (muisti tyhjenee, kun kontti käynnistyy uudelleen).
-Laajennukset (myöhemmin):
 
-* Tiedostopohjainen tallennus (`notes.json` + Docker-volume)
-* MariaDB/MySQL (Sequelize)
 
 ---
 
