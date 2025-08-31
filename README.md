@@ -20,7 +20,7 @@ my-notes-app/
 └─ public/
 └─ index.html
 
-````
+```
 
 > Huom: `docker-compose.yml` **ei** sisällä `version:`-riviä (se on vanhentunut).
 
@@ -33,15 +33,19 @@ my-notes-app/
 
 ---
 
+```
+
 ## 🚀 Käynnistys Dockerilla
 
 Projektikansiossa:
 
 ```bash
+
 docker compose build
 docker compose up
+
 ```
-````
+
 
 Avaa selaimessa:
 👉 [http://localhost:3000](http://localhost:3000)
