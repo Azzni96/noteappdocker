@@ -40,6 +40,7 @@ Projektikansiossa:
 ```bash
 docker compose build
 docker compose up
+```
 ````
 
 Avaa selaimessa:
